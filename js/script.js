@@ -2,35 +2,69 @@ function game(numberOfRounds)
 {
     let playerSelection;
     let computerSelection;
+    let message;
+    let playerScore = 0;
+    let computerScore = 0;
     
     for(let i = 0; i < numberOfRounds; i++) 
     {
         playerSelection = playerPlay();
-        while(!verifyPlayerSelection(playerSelection))
+        while(!isPlayerSelectionValid(playerSelection))
             playerSelection = playerPlay(false);
         computerSelection = computerPlay();
-        alert(playRound(playerSelection, computerSelection));
+
+        roundResults = playRound(playerSelection, computerSelection);
+        if(roundResults.score == 1) 
+            playerScore++;
+        else if(roundResults.score == -1)
+            computerScore++;
+
+        message = `ROUND ${i + 1}:\n`;
+        message += roundResults.message;
+        message += `\n\n Player Score: ${playerScore} Computer Score: ${computerScore}`
+
+        if(roundResults.score == 0)
+            i--;
+
+        if(i == numberOfRounds - 1)
+        {
+            if(playerScore == computerScore)
+                message += `\n\n GAME OVER... It's a tie!?`;
+            else if(playerScore < computerScore)
+                message += `\n\n GAME OVER... You lost...`;
+            else if(playerScore > computerScore)
+                message += `\n\n GAME OVER... You won!!`
+        }
+
+        alert(message);
+        console.log(message);
 
     }
 }
 
 function playRound(playerSelection, computerSelection) 
 {
-    let result = `You chose: ${playerSelection}. Computer chose: ${computerSelection}.`;
+    let result = {
+        message: `You chose: ${playerSelection}. Computer chose: ${computerSelection}.`,
+        score: 0
+    }
 
     if(playerSelection == computerSelection) 
     {
-        result += `\nIt's a tie...`;
+        result.message += `\nIt's a tie... Try again.`;
+        result.score = 0;
     }
     else if( (playerSelection == "Rock" && computerSelection == "Scissors") || 
              (playerSelection == "Paper" && computerSelection == "Rock") || 
              (playerSelection == "Scissors" && computerSelection == "Paper") ) 
     {
-        result += `\nYou Win! ${playerSelection} beats ${computerSelection}.`;
+        result.message += `\nYou Win! ${playerSelection} beats ${computerSelection}.`;
+        result.score = 1;
     }
     else 
     {
-        result += `\nYou Lose! ${computerSelection} beats ${playerSelection}.`
+        result.message += `\nYou Lose! ${computerSelection} beats ${playerSelection}.`
+        result.score = -1;
     }
 
     return result;
@@ -43,7 +77,7 @@ function playerPlay(isValidEntry = true)
     return playerChoice;
 }
 
-function verifyPlayerSelection(playerSelection) 
+function isPlayerSelectionValid(playerSelection) 
 {
     if(playerSelection == "Rock" || playerSelection == "Paper" || playerSelection == "Scissors")
         return true;
@@ -79,4 +113,4 @@ String.prototype.toSentenceCase = function()
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
 }
 
-game(1);
+game(5);
