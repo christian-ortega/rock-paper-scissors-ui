@@ -1,6 +1,16 @@
-function game(numberOfRounds) 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let playerSelection;
+        if(button.id == "rock") playerSelection = "Rock";
+        if(button.id == "paper") playerSelection = "Paper";
+        if(button.id == "scissors") playerSelection = "Scissors";
+        game(1, playerSelection);
+    });
+});
+
+function game(numberOfRounds, playerSelection) 
 {
-    let playerSelection;
     let computerSelection;
     let message;
     let playerScore = 0;
@@ -8,9 +18,6 @@ function game(numberOfRounds)
     
     for(let i = 0; i < numberOfRounds; i++) 
     {
-        playerSelection = playerPlay();
-        while(!isPlayerSelectionValid(playerSelection))
-            playerSelection = playerPlay(false);
         computerSelection = computerPlay();
 
         roundResults = playRound(playerSelection, computerSelection);
@@ -70,21 +77,6 @@ function playRound(playerSelection, computerSelection)
     return result;
 }
 
-function playerPlay(isValidEntry = true) 
-{
-    let playerChoice = isValidEntry ? prompt("Please select your choice: Rock, Paper, or Scissors") : prompt("Invalid Choice. Please select your choice: Rock, Paper, or Scissors");
-    playerChoice = playerChoice.toSentenceCase();
-    return playerChoice;
-}
-
-function isPlayerSelectionValid(playerSelection) 
-{
-    if(playerSelection == "Rock" || playerSelection == "Paper" || playerSelection == "Scissors")
-        return true;
-    //else
-    return false;
-}
-
 function computerPlay()
 {
     let numericalChoice = Math.floor(Math.random() * 3);
@@ -107,10 +99,3 @@ function computerPlay()
 
     return finalChoice;
 }
-
-String.prototype.toSentenceCase = function()
-{
-    return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
-}
-
-game(5);
