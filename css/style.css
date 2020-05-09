@@ -1,22 +1,28 @@
-body {
+body, #scoredisplay {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    
+}
+
+h1, p {
+    text-align: center;
 }
 
 button {
-    height: 512px;
-    width: 512px;
+    --dimension: 28vh;
+
+    height: var(--dimension);
+    width: var(--dimension);
     background-repeat: no-repeat;
-    background-size: 512px 512px;
+    background-size: var(--dimension) var(--dimension);
 }
 
 .uidiv {
-    height: 50vh;
+    width: 50vw;
+    height: 100vh;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -30,16 +36,32 @@ button {
 }
 
 #infodisplay {
-    width: 50vw;
+    height: 50vh;
+    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #choicedisplay {
-    width: 50vw;
+    height: 50vh;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
+    background-color: blue;
+}
+
+#rockdiv, #scissorsdiv {
+    align-self: flex-start;
+    background-color: pink;
+}
+
+#paperdiv {
+    align-self: flex-end;
+    background-color: purple;
 }
 
 #rock {
