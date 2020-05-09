@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+button {
+    height: 512px;
+    width: 512px;
+    background-repeat: no-repeat;
+    background-size: 512px 512px;
+}
+
+.uidiv {
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttondiv {
+
+}
+
+.choiceimage {
+    height: 256px;
+    width: 256px;
+}
+
+#infodisplay {
+    width: 50vw;
+}
+
+#choicedisplay {
+    width: 50vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#rock {
+    background-image: url("../img/rock.jpg");
+}
+
+#paper {
+    background-image: url("../img/paper.jpg");
+}
+
+#scissors {
+    background-image: url("../img/scissors.jpg");
+}

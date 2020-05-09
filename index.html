@@ -6,38 +6,57 @@
     </head>
 
     <body>
-        <div id="gameinfo">
-            <h1>ROCK PAPER SCISSORS</h1>
+        <div id="gameinfo" class="uidiv">
+            <div id="infodisplay">
+                <h1>ROCK PAPER SCISSORS</h1>
             
-            <p id="roundnumber">START GAME</p>
-            <p id="roundresults">Make a selection on the right.</p>
-            
-            <div id="playerscoredisplay">
-                <p>PLAYER:</p>
-                <p id="playerscorenumber">0</p>
+                <p id="roundnumber">START GAME</p>
+                <p id="roundresults">Make a selection on the right.</p>
+                
+                <div id="playerscoredisplay">
+                    <p>PLAYER:</p>
+                    <p id="playerscorenumber">0</p>
+                </div>
+                
+                <div id="computerscoredisplay">
+                    <p>COMPUTER:</p>
+                    <p id="computerscorenumber">0</p>
+                </div>
             </div>
             
-            <div id="computerscoredisplay">
-                <p>COMPUTER:</p>
-                <p id="computerscorenumber">0</p>
-            </div>
             
-            <div id="playerchoicedisplay">
-                <p>PLAYER CHOSE:</p>
-                <img id="playerchoiceimage" src="img/question-mark.jpg" width="256" height="256">
+            <div id="choicedisplay">
+                <div id="playerchoicedisplay">
+                    <p>PLAYER CHOSE:</p>
+                    <img id="playerchoiceimage" class="choiceimage" src="img/question-mark.jpg" alt="Question mark, a placeholder image">
+                </div>
+                
+                <div id="computerchoicedisplay">
+                    <p>COMPUTER CHOSE:</p>
+                    <img id="computerchoiceimage" class="choiceimage" src="img/question-mark.jpg" alt="Question mark, a placeholder image">
+                </div>
             </div>
-            
-            <div id="computerchoicedisplay">
-                <p>COMPUTER CHOSE:</p>
-                <img id="computerchoiceimage" src="img/question-mark.jpg" width="256" height="256">
-            </div>
+
         </div>
         
         
-        <div id="buttons">
-            <button id="rock">ROCK</button>
-            <button id="paper">PAPER</button>
-            <button id="scissors">SCISSORS</button>
+        <div id="buttons" class="uidiv">
+
+            <div class="buttondiv">
+                <p>ROCK</p>
+                <button id="rock"></button>
+            </div>
+            
+            <div class="buttondiv">
+                <p>PAPER</p>
+                <button id="paper"></button>
+            </div>
+            
+            <div class="buttondiv">
+                <p>SCISSORS</p>
+                <button id="scissors"></button>
+            </div>
+            
         </div>
 
 
