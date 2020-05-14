@@ -1,9 +1,9 @@
-# rock-paper-scissors
+# rock-paper-scissors-ui
 
-THE ODIN PROJECT: ROCK PAPER SCISSORS
+THE ODIN PROJECT: DOM MANIPULATION
 
-Rock Paper Scissors (https://christian-ortega.github.io/rock-paper-scissors/)
+Rock Paper Scissors UI (https://christian-ortega.github.io/rock-paper-scissors-ui/)
 
-This is an implementation of the classic hand game "Rock Paper Scissors" using prompts, alerts, and console logs in JavaScript.
+This is an implementation of the classic hand game "Rock Paper Scissors" with basic UI elements in JavaScript.
 
-In this project, I emphasized the usage of functions, if/else blocks, switch blocks, and for loops. My goal was to make my code as readable as possible, by using such things as helper functions, prototype functions, the ternary conditional operator, and objects. I also wanted to communicate a proper amount of information to the user of this game (current round, user's choice, computer's choice, score, etc.), to make the game accessible for users of different backgrounds. 
+This project builds off of my previous implementation of Rock Paper Scissors with no UI elements, where game info was communicated through alert messages and console logs. In this implementation, I added HTML elements along with CSS styling to communicate the game information. I refactored the previous script and replaced any relevant code sections with query selectors. This allowed the page to be dynamic and respond to user input. Thus, the entirety of the game can now be played with a mouse, without relying on user's knowledge of how to operate alert messages or console logs.
