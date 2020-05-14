@@ -24,8 +24,6 @@ p {
 }
 
 button {
-    
-
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -63,25 +61,26 @@ button {
 }
 
 .buttondiv:hover {
-        border-width: 2px; 
+    border-width: 2px; 
 }
 
 .choicedisplay {
-    width: 25%;
+    width: 50%;
 
     margin-top: -26px;
 }
 
 .scoredisplay {
-    width: 25%;
-
+    width: 50%;
 }
 
 .choiceimage {
     height: 0;
-
-    width: 100%;
-    padding-top: 100%;
+    width: 45%;
+    padding-top: 45%;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
 
     background-image: url("../img/question-mark.jpg");
     background-repeat: no-repeat;
@@ -91,32 +90,28 @@ button {
     border-radius: 5px;
 }
 
-.scorefontsize {
+.scorefont {
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 3.2vh;
 
     margin-bottom: 10px;
 }
 
-.choicefontsize {
+.choicefont {
+    letter-spacing: 0.1em;
 
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0 auto 0 auto;
 
     font-weight: bold;
-    font-size: 2.65vh;
+    font-size: 2.8vh;
 }
 
 #gameinfo {
     width: 50vw;
     height: 80vh;
 
-
     background-color: #FFF887;
     
-
     border: 5px solid black;
     border-radius: 20px;
 }
@@ -167,7 +162,6 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 #rock {
@@ -183,7 +177,6 @@ button {
 }
 
 #ruleslink {
-
     text-align: end;
     margin-right: 2%;
     margin-bottom: -3%;
