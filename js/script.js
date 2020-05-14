@@ -88,11 +88,11 @@ function updateImage(user, selection) {
         return;
 
     if(selection == "Rock")
-        ourImage.src = "img/rock.jpg";
+        ourImage.style.backgroundImage = "url(img/rock.jpg)";
     else if(selection == "Paper")
-        ourImage.src = "img/paper.jpg";
+        ourImage.style.backgroundImage = "url(img/paper.jpg)";
     else if(selection == "Scissors")
-        ourImage.src = "img/scissors.jpg";
+        ourImage.style.backgroundImage = "url(img/scissors.jpg)";
 }
 
 function updateRoundNumber() {
