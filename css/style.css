@@ -73,12 +73,29 @@ button {
     margin-top: -26px;
 }
 
+.scoredisplay {
+    width: 25%;
+
+}
+
 .choiceimage {
     width: 100%;
     height: auto;
 
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.scorefontsize {
+    font-weight: bold;
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.bigfontsize {
+    font-weight: bold;
+    font-size: 26px;
 }
 
 #playerchoicedisplay {
@@ -111,6 +128,15 @@ button {
     border-radius: 20px;
 }
 
+#roundnumber {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#roundresults {
+    font-style: italic;
+}
+
 #infodisplay {
     height: 50vh;
 
@@ -119,7 +145,7 @@ button {
     justify-content: space-evenly;
 }
 
-#scoredisplay {
+#scoredisplaydiv {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
