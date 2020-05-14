@@ -17,12 +17,10 @@ body {
 
 h1 {
     font-size: 4.47vh;
-    margin-bottom:
 }
 
 p { 
     font-size: 2.24vh;
-    white-space: nowrap;
 }
 
 button {
@@ -100,12 +98,15 @@ button {
     margin-bottom: 10px;
 }
 
-.bigfontsize {
+.choicefontsize {
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+
     font-weight: bold;
     font-size: 2.65vh;
-}
-
-#playerchoicedisplay {
 }
 
 #gameinfo {
