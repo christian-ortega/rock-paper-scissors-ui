@@ -16,12 +16,12 @@ body {
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 4.47vh;
     margin-bottom:
 }
 
 p { 
-    font-size: 22px;
+    font-size: 2.24vh;
     white-space: nowrap;
 }
 
@@ -43,12 +43,12 @@ button {
 }
 
 .scorenumber {
-    font-size: 60px;
+    font-size: 6.1vh;
     margin-top: 0;
 }
 
 .buttondiv {
-    height: 22vh;
+    height: 22vmin;
 
     align-self: center;
 
@@ -95,14 +95,14 @@ button {
 
 .scorefontsize {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 3vh;
 
     margin-bottom: 10px;
 }
 
 .bigfontsize {
     font-weight: bold;
-    font-size: 26px;
+    font-size: 2.65vh;
 }
 
 #playerchoicedisplay {
