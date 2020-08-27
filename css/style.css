@@ -51,6 +51,9 @@ button {
     width: 293px;
     height: 223px;
 
+    max-width: 60%;
+    max-height: 30%;
+
     align-self: center;
 
     writing-mode: vertical-lr;
@@ -129,6 +132,8 @@ button {
 }
 
 #buttons {
+    position: relative;
+
     width: 30vw;
     height: 80vh;
 
@@ -193,6 +198,10 @@ button {
     text-align: end;
     margin-right: 2%;
     margin-bottom: -3%;
+
+    position: absolute;
+    right: 0;
+    bottom: 30px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -216,8 +225,9 @@ button {
         width: 80vw;
         height: 40vh;
 
+        margin-bottom: 50px;
+
         flex-direction: row;
-    
         justify-content: space-evenly;
     
         margin-right: 0;
@@ -228,18 +238,16 @@ button {
     .buttondiv {
         width: 223px;
         height: 293px;
+
+        max-width: 30%;
+        max-height: 70%;
     
         align-self: center;
     
         writing-mode: horizontal-tb;
-        text-orientation: upright;
     }
 
     #ruleslink {
-        text-align: end;
-        margin-right: 2%;
-        margin-bottom: -3%;
-
         position: absolute;
         right: 0;
         bottom: 30px;
