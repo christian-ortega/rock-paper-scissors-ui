@@ -25,7 +25,11 @@ p {
 
 button {
     height: 100%;
-    width: 100%;
+    width: 223px;
+
+    max-width: 100%;
+    max-height: 100%;
+
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -44,7 +48,8 @@ button {
 }
 
 .buttondiv {
-    height: 22vmin;
+    width: 293px;
+    height: 223px;
 
     align-self: center;
 
@@ -67,12 +72,18 @@ button {
 
 .choicedisplay {
     width: 50%;
+    max-height: 100%;
 
     margin-top: -26px;
 }
 
 .scoredisplay {
     width: 50%;
+}
+
+.buttonimage {
+    min-width: 50px;
+    min-height: 50px;
 }
 
 .choiceimage {
@@ -142,7 +153,7 @@ button {
 }
 
 #infodisplay {
-    height: 50vh;
+    height: 50%;
 
     display: flex;
     flex-direction: column;
@@ -158,11 +169,12 @@ button {
 }
 
 #choicedisplaydiv {
-    height: 50vh;
+    height: 50%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 #rock {
@@ -181,4 +193,55 @@ button {
     text-align: end;
     margin-right: 2%;
     margin-bottom: -3%;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        height: auto;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #gameinfo {
+        width: 80vw;
+        height: 80vh;
+    
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    #buttons {
+        width: 80vw;
+        height: 40vh;
+
+        flex-direction: row;
+    
+        justify-content: space-evenly;
+    
+        margin-right: 0;
+    
+        position: relative;
+    }
+
+    .buttondiv {
+        width: 223px;
+        height: 293px;
+    
+        align-self: center;
+    
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+    }
+
+    #ruleslink {
+        text-align: end;
+        margin-right: 2%;
+        margin-bottom: -3%;
+
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+    }
 }
